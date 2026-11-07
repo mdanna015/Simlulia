@@ -15,8 +15,8 @@ body{background:var(--bg);color:var(--ink);font:15px/1.35 system-ui,-apple-syste
 .sb{display:flex;justify-content:space-between;padding:10px 22px 4px;font-size:13px;font-weight:600;z-index:2;background:#0003}
 .hb{position:absolute;bottom:6px;left:50%;width:110px;height:5px;margin-left:-55px;border-radius:3px;background:#fffa;cursor:pointer;z-index:5}
 .lk,.hm{flex:1;display:flex;flex-direction:column;align-items:center;padding:28px 16px;text-align:center;cursor:pointer}
-.big{font-size:76px;font-weight:200;line-height:1}
-.dt{opacity:.85;margin:6px 0 20px;text-transform:capitalize}
+.big{font-size:84px;font-weight:100;line-height:1}
+.dt{opacity:.9;margin:6px 0 20px}.dt::first-letter{text-transform:uppercase}
 .nl{width:100%;display:flex;flex-direction:column;gap:8px}
 .nt{background:#ffffff26;backdrop-filter:blur(8px);border-radius:14px;padding:9px 12px;text-align:left;display:flex;flex-direction:column;font-size:13px}
 .nt small{opacity:.7}
@@ -64,6 +64,23 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px soli
 .tb{display:flex;background:#111b21}.tb button{flex:1;padding:9px;background:none;border:0;border-bottom:2px solid transparent;color:#e9edef;font:inherit;cursor:pointer}.tb .on{border-color:#25d366}.row2 button{border:0;border-radius:30px;padding:12px 20px;color:#fff;font:inherit;cursor:pointer}
 .pg{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}.pt{aspect-ratio:1;background:#16232b;display:grid;place-items:center;font-size:40px;overflow:hidden;cursor:pointer}.pt img{width:100%;height:100%;object-fit:cover}
 .call{position:absolute;inset:0;z-index:6;background:#111c;backdrop-filter:blur(14px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px}.row2{display:flex;gap:40px}.call button{border:0;border-radius:30px;padding:14px 22px;color:#fff;font:inherit;cursor:pointer}.rj{background:#ef4444}.ac{background:#22c55e}
+.nch{position:absolute;top:0;left:50%;width:170px;height:30px;margin-left:-85px;background:#000;border-radius:0 0 20px 20px;z-index:3}
+#scr:not([data-m=lock]):not([data-m=home]) .sb{background:#111b21}#scr[data-m=wa] .sb{background:#075e54}#scr[data-m=lock] .sb,#scr[data-m=home] .sb{background:none}
+.hm{padding-top:20px}.hm .gr{gap:18px 4px;margin-top:22px}.ap{font-weight:600;font-size:12px;text-shadow:0 1px 3px #0008;gap:6px}
+.ap .ic{position:relative;width:68px;height:68px;border-radius:20px;background:#ffffff26;border:2px solid #ffffff55;display:grid;place-items:center;font-size:32px}
+.ic img{width:100%;height:100%;object-fit:contain;border-radius:inherit}.ap .ic .bd{position:absolute;top:-7px;right:-7px}
+.dock{margin-top:auto;width:100%;background:#3a3b3fcc;border-radius:34px;padding:14px 8px;display:flex;justify-content:space-around;margin-bottom:26px}.dock .ic{width:60px;height:60px;border:0;background:#ffffff14}
+.wa{display:flex;flex-direction:column;flex:1;min-height:0;background:#fff;color:#111}.wa .hd{background:#075e54;color:#fff}.wa .hd button{color:#fff}.wa .hd small{color:#b7f5d0}
+.wa .lst{background:#fff;color:#111}.wa .it{border-bottom:1px solid #eee}.wa .it small{color:#6b7280}.wa .av{background:#e5e7eb}.wa .bd{background:#25d366}
+.av{overflow:hidden}.av img{width:100%;height:100%;object-fit:cover}.rt{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.sr{margin:10px 14px;padding:10px 14px;border-radius:14px;background:#f1f2f4;color:#9ca3af}.sec{padding:10px 16px;background:#f6f7f9;color:#6b7280;font-weight:700;font-size:12px}
+.me0{display:flex;flex-direction:column;align-items:center;gap:4px;padding:20px}.big0{width:110px;height:110px;font-size:56px;border:4px solid #25d366}
+.fl{padding:14px 18px;border-bottom:1px solid #eee}.fl small{display:block;color:#075e54;font-weight:700;margin-bottom:4px}
+.wa .msgs{background:#ece5dd;color:#111}.wa .th{background:#fff}.wa .me{background:#dcf8c6}.wa .me small{color:#128c7e}
+.wa .chs{background:#ece5dd}.wa .chs button{color:#111;background:#fff}
+.inp{display:flex;align-items:center;gap:8px;padding:8px 10px 26px;background:#f0f0f0}.cm,.mic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#d1d5db}.mic{background:#25d366}.tx{flex:1;background:#fff;border-radius:22px;padding:11px 16px;color:#9ca3af}
+.tab{display:flex;border-top:1px solid #eee;background:#fff;padding:6px 0 22px}.tab button{flex:1;background:none;border:0;font:inherit;font-size:12px;font-weight:600;color:#9ca3af;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer}.tab .on{color:#075e54}.tab b{font-size:22px}
+.wa .pad{background:#f8f9fb;color:#111}.wa .dots i{border-color:#9ca3af}.wa .dots i.on{background:#374151}.wa .keys button{background:#e5e7eb;color:#111}.wa .lnk{color:#111}
 @media (max-width:480px){#ph{width:100%;height:100%;max-height:none;border:0;border-radius:0}.cap{display:none}}
 </style></head><body>
 <div id="ph"><div id="scr"></div></div>
@@ -76,6 +93,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px soli
  Cada acción puede llevar d = milisegundos de espera tras la anterior. */
 const STORY0={
  pin:"1234",
+ wall:"",lockWall:"",icons:{},dock:["wa","photos","safari","cam"],
+ me:{n:"Mi Teléfono",p:"+52 55 1234 5678",i:"Disponible",img:""},statuses:[],
  contacts:{mama:{p:"555-0101",n:"Mamá",e:"👩"},lu:{p:"555-0202",n:"Lucía",e:"🧑‍🎤"},unk:{n:"Desconocido",e:"❔",hid:1}},
  chats:{
   mama:[["them","¿Ya llegaste a casa?","21:02"],["me","Sí, ya casi","21:04"],["them","Avísame cuando entres","21:05"]],
@@ -151,7 +170,7 @@ function act(a){const c=a.c;switch(a.a){
  save();render()}
 /* ========== PANTALLAS ========== */
 function pad(title){return`<div class="pad"><div class="ti">${title}</div><div class="dots ${ui.err?"sh":""}">${[0,1,2,3].map(i=>`<i class="${i<ui.pin.length?"on":""}"></i>`).join("")}</div><div class="keys">${[1,2,3,4,5,6,7,8,9,"",0,"⌫"].map(k=>k===""?"<b></b>":`<button onclick="G.k('${k}')">${k}</button>`).join("")}</div><button class="lnk" onclick="G.cancel()">Cancelar</button></div>`}
-const lock=()=>ui.pad?pad("Introduce el código"):`<div class="lk" onclick="G.pad()"><div class="clk big">${hm(st.clk)}</div><div class="dt">${new Date(Date.now()+st.clk*6e4).toLocaleDateString("es",{weekday:"long",day:"numeric",month:"long"})}</div><div class="nl">${st.notifs.map(n=>`<div class="nt"><small>${n.app} · ${n.h}</small><b>${esc(n.title)}</b><span>${esc(n.body)}</span></div>`).join("")}</div><div class="hint">Toca para desbloquear</div></div>`;
+const lock=()=>ui.pad?pad("Introduce el código"):`<div class="lk" onclick="G.pad()"><div class="clk big">${hm(st.clk)}</div><div class="dt">${new Date(Date.now()+st.clk*6e4).toLocaleDateString("es",{weekday:"long",day:"numeric",month:"long"})}</div><div class="nl">${st.notifs.map(n=>`<div class="nt"><small>${n.app} · ${n.h}</small><b>${esc(n.title)}</b><span>${esc(n.body)}</span></div>`).join("")}</div><div class="hint">↑<br>Deslizar para desbloquear</div></div>`;
 function home(){const u=Object.values(st.unread).reduce((a,b)=>a+b,0);
  return`<div class="hm"><div class="gr"><div class="ap" onclick="G.app('wa')"><span style="background:#25d366">💬</span>WhatsApp${u?`<i class="bd">${u}</i>`:""}</div><div class="ap" onclick="G.app('hist')"><span style="background:linear-gradient(135deg,#7c3aed,#d946ef)">✨</span>Historia</div><div class="ap" onclick="G.app('notes')"><span style="background:#f5c518">📝</span>Notas</div><div class="ap" onclick="G.app('photos')"><span style="background:#fff">🌸</span>Fotos</div><div class="ap" onclick="G.app('phone')"><span style="background:#22c55e">📞</span>Teléfono</div><div class="ap" onclick="G.app('mail')"><span style="background:#3b82f6">✉️</span>Correo</div><div class="ap" onclick="G.app('cal')"><span style="background:#fff">📅</span>Calendario</div></div></div>`}
 function wa(){const c=ui.chat;
@@ -178,11 +197,26 @@ function mail(){if(ui.ml!=null){const m=st.mails[ui.ml];return`<div class="hd"><
  return`<div class="hd"><b>Correo</b></div>${tabs([["in","Recibidos"],["spam","Spam"],["trash","Papelera"]],f,"mf")}<div class="lst">${st.mails.map((m,i)=>m.f==f?`<div class="it" onclick="G.mail(${i})"><div><b style="${m.r?"font-weight:400":""}">${esc(m.from)}</b><small>${esc(m.s)}</small></div>${m.r?"":'<i class="bd">•</i>'}</div>`:"").join("")||none("Vacío.")}</div>`}
 function cal(){const E=[...st.events].sort((a,b)=>(a.d+a.h).localeCompare(b.d+b.h));
  return`<div class="hd"><b>Calendario</b></div><div class="lst">${E.map(e=>`<div class="it" onclick="ev('open:event:${e.id}')"><span class="av" style="font-size:13px;text-align:center;line-height:1.1">${e.d.slice(8)}/${e.d.slice(5,7)}</span><div><b>${esc(e.t)}</b><small>${e.h}</small></div></div>`).join("")||none("Sin eventos.")}</div>`}
+const APPS=[["wa","Mensajes","💬"],["photos","Fotos","🌸"],["cam","Cámara","📷"],["maps","Mapas","🗺️"],["music","Música","🎵"],["cal","Calendario","📅"],["notes","Notas","📝"],["clock","Reloj","🕐"],["set","Ajustes","⚙️"],["safari","Safari","🧭"],["mail","Correo","✉️"],["phone","Teléfono","📞"],["hist","Historia","✨"]],OK=["wa","photos","cal","notes","mail","phone","hist"];
+function home(){const u=Object.values(st.unread).reduce((a,b)=>a+b,0),I=STORY.icons||{};
+ const ap=(x,lab)=>`<div class="ap" onclick="G.app('${x[0]}')"><span class="ic">${I[x[0]]?`<img src="${esc(I[x[0]])}" alt="">`:x[2]}${x[0]=="wa"&&u?`<i class="bd">${u}</i>`:""}</span>${lab?x[1]:""}</div>`;
+ return`<div class="hm"><div class="gr">${APPS.map(x=>ap(x,1)).join("")}</div><div class="dock">${(STORY.dock||["wa","photos","safari","cam"]).map(id=>ap(APPS.find(x=>x[0]==id),0)).join("")}</div></div>`}
+const av=(k,s)=>{const c=STORY.contacts[k]||{};return`<span class="av" style="${s||""}">${c.img?`<img src="${esc(c.img)}" alt="">`:(c.e||"❔")}</span>`};
+function wa(){const c=ui.chat,t=ui.wt||"chats",M=STORY.me||{};
+ if(c){if(st.locks[c])return`<div class="wa">${pad("🔒 "+esc(nm(c)))}</div>`;
+  return`<div class="wa"><div class="hd"><button onclick="G.back()">←</button>${av(c,"width:38px;height:38px")}<div><b>${esc(nm(c))}</b><small>${typ[c]?"escribiendo…":"en línea"}</small></div><span style="margin-left:auto">📞</span></div><div class="msgs">${st.chats[c].map(m=>`<div class="m ${m.f=="me"?"me":"th"}">${esc(m.t)}<small>${m.h}${m.f=="me"?" ✓✓":""}</small></div>`).join("")}${typ[c]?'<div class="m th ty">• • •</div>':""}</div>${st.ch&&st.ch.c==c?`<div class="chs">${st.ch.o.map((o,i)=>`<button onclick="G.pick(${i})">${esc(o.t)}</button>`).join("")}</div>`:""}<div class="inp"><span class="cm">📷</span><div class="tx">Mensaje</div><span class="mic">🎙️</span></div></div>`}
+ let b;
+ if(t=="chats")b=`<div class="sr">🔍 Buscar…</div>`+Object.keys(STORY.contacts).filter(k=>!st.hid[k]&&st.chats[k]).map(k=>{const l=st.chats[k].slice(-1)[0],u=st.unread[k];return`<div class="it" onclick="G.chat('${k}')">${av(k)}<div><b>${esc(nm(k))}</b><small>${st.locks[k]?"🔒 Chat protegido":l?esc(l.t):""}</small></div><span class="rt"><small>${l?l.h:""}</small>${u?`<i class="bd">${u}</i>`:""}</span></div>`}).join("");
+ else if(t=="calls")b=`<div class="sec">LLAMADAS RECIENTES</div>`+(st.recent.map(r=>`<div class="it">${av(r.c)}<div><b style="${r.k=="miss"?"color:#ef4444":""}">${esc(nm(r.c))}</b><small>${{in:"↙ Entrante",out:"↗ Saliente",miss:"↙ Perdida"}[r.k]}</small></div><small>${r.h}</small></div>`).join("")||none("Sin llamadas"));
+ else if(t=="status")b=`<div class="sec">MI ESTADO</div><div class="it"><span class="av">${M.img?`<img src="${esc(M.img)}" alt="">`:"🙂"}</span><div><b>Mi estado</b><small>Sin actualizaciones</small></div></div><div class="sec">ACTUALIZACIONES RECIENTES</div>`+(STORY.statuses||[]).map(s=>`<div class="it">${av(s.c)}<div><b>${esc(nm(s.c))}</b><small>${esc(s.t)}</small></div></div>`).join("");
+ else b=`<div class="me0"><span class="av big0">${M.img?`<img src="${esc(M.img)}" alt="">`:"🙂"}</span><b>${esc(M.n||"")}</b><small>${esc(M.i||"")}</small></div><div class="fl"><small>NÚMERO DE TELÉFONO</small>${esc(M.p||"")}</div><div class="fl"><small>NOMBRE</small>${esc(M.n||"")}</div><div class="fl"><small>INFO</small>${esc(M.i||"")}</div><div class="fl">🚫 Contactos bloqueados</div><div class="fl">🔔 Notificaciones</div>`;
+ return`<div class="wa"><div class="hd"><button onclick="G.home()">←</button><b style="flex:1;text-align:center">${{chats:"Chats",calls:"Llamadas",status:"Estados",set:"Ajustes"}[t]}</b><span>⋮</span></div><div class="lst">${b}</div><div class="tab">${[["chats","💬","Chats"],["calls","📞","Llamadas"],["status","⭕","Estados"],["set","⚙️","Ajustes"]].map(([k,i,l])=>`<button class="${t==k?"on":""}" onclick="G.wt('${k}')"><b>${i}</b>${l}</button>`).join("")}</div></div>`}
 function render(){
  const c0=$("cd"),v=c0&&c0.value,f=c0&&document.activeElement==c0;
  const h=ui.s=="lock"?lock():ui.s=="home"?home():ui.app=="wa"?wa():ui.app=="notes"?notes():ui.app=="photos"?photos():ui.app=="phone"?phone():ui.app=="mail"?mail():ui.app=="cal"?cal():hist();
  const b=ban&&ui.s!="lock"?`<div class="ban"><b>${esc(ban.title)}</b><span>${esc(ban.body)}</span></div>`:"";
- $("scr").innerHTML=`<div class="sb"><span class="clk">${hm(st.clk)}</span><span class="bt">${st.bat}% ▮</span></div>${h}${b}${st.call?callUI():""}<div class="hb" onclick="G.home()"></div>`;
+ $("scr").innerHTML=`<div class="nch"></div><div class="sb"><span class="clk">${hm(st.clk)}</span><span class="bt">●●●● WiFi ${st.bat}%</span></div>${h}${b}${st.call?callUI():""}<div class="hb" onclick="G.home()"></div>`;
+ $("scr").dataset.m=ui.s=="app"?ui.app:ui.s;const w=ui.s=="lock"?STORY.lockWall:STORY.wall;$("scr").style.background=w?`center/cover url("${w}")`:"";
  const c1=$("cd");if(c1&&v!=null){c1.value=v;if(f)c1.focus()}
  const m=document.querySelector(".msgs");if(m)m.scrollTop=1e9}
 const leave=()=>{if(ui.s=="app"&&ui.app=="wa"&&ui.chat&&!st.locks[ui.chat])ev("leave:chat:"+ui.chat)};
@@ -197,7 +231,7 @@ const G={
     else{const c=ui.chat;delete st.locks[c];st.unread[c]=0;ev("open:chat:"+c)}}
    else{ui.err=1;render();setTimeout(()=>{ui.err=0;ui.pin="";render()},450);return}}
   render();save()},
- app(a){ui.s="app";ui.app=a;ui.chat=null;ui.nt=ui.ph=ui.ml=null;ev("open:app:"+a);render()},
+ app(a){if(!OK.includes(a)){ban={title:"Próximamente",body:"Esta app aún no está disponible."};setTimeout(()=>{ban=null;render()},2500);render();return}ui.s="app";ui.app=a;ui.chat=null;ui.nt=ui.ph=ui.ml=null;ev("open:app:"+a);render()},
  home(){if(ui.s=="lock")return;leave();ui.s="home";ui.app=null;ui.chat=null;ui.nt=ui.ph=ui.ml=null;render()},
  chat(c){ui.chat=c;ui.pin="";if(!st.locks[c]){st.unread[c]=0;ev("open:chat:"+c)}render()},
  back(){leave();ui.chat=null;render()},
@@ -208,6 +242,7 @@ const G={
   render()},
  exp(){ui.exp=btoa(unescape(encodeURIComponent(JSON.stringify(st))));ui.msg="Copia el código de abajo.";render();$("ta").select()},
  imp(){try{const o=JSON.parse(decodeURIComponent(escape(atob($("ta").value.trim()))));if(!o.chats)throw 0;st=o;save();ui.msg="Partida cargada.";ui.exp=""}catch(e){ui.msg="Ese código de partida no es válido."}render()},
+ wt(k){ui.wt=k;ui.chat=null;render()},
  pt(k){ui.pt=k;render()},
  d(k){ui.num=k=="⌫"?(ui.num||"").slice(0,-1):((ui.num||"")+k).slice(0,14);render()},
  dial(){const n=ui.num;if(!n)return;const c=Object.keys(STORY.contacts).find(k=>STORY.contacts[k].p==n)||n;st.recent.unshift({c,k:"out",h:hm(st.clk)});ui.num="";ev("dial:"+n);ui.pt="rec";render();save()},
@@ -226,7 +261,7 @@ const G={
 };
 const TK=setInterval(()=>{st.t++;if(st.t%60==0)st.bat=Math.max(1,st.bat-st.drain);
  document.querySelectorAll(".clk").forEach(e=>e.textContent=hm(st.clk));
- document.querySelectorAll(".bt").forEach(e=>e.textContent=st.bat+"% ▮");
+ document.querySelectorAll(".bt").forEach(e=>e.textContent="●●●● WiFi "+st.bat+"%");
  fire(r=>r.on.startsWith("after:")&&+r.on.slice(6)<=st.t)},1000);
 /* ===== Editor de historia: abre la página con #editor al final del enlace ===== */
 function editor(){clearInterval(TK);document.body.innerHTML=`<div style="width:min(720px,94%);display:flex;flex-direction:column;gap:8px;height:92%"><b>Editor de historia</b><small>Edita el JSON de la historia. Se guarda en este navegador. Para publicarla para todos, copia el JSON y pégalo en STORY0 del archivo.</small><textarea id="js" style="flex:1;font:12px/1.4 ui-monospace,monospace;padding:10px;border-radius:10px"></textarea><div id="em"></div><div><button onclick="E.s()">Guardar y reiniciar partida</button> <button onclick="E.r()">Volver a la original</button> <button onclick="E.o()">Abrir teléfono</button></div></div>`;$("js").value=JSON.stringify(STORY,null,1)}
